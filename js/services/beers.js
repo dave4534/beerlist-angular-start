@@ -4,13 +4,25 @@ app.factory('beerService', function(){
   beerName: 'Oakshire',
   beerStyle: 'Espresso',
   beerABV: '5%',
-  beerImage: 'something'
+  beerImage: "http://www.ninkasibrewing.com/Family-Flagship-IPA-300x432.png"
 },
 {
   beerName: 'Ninkasi',
   beerStyle: 'Slayer',
   beerABV: '55%',
-  beerImage: 'something else'
+  beerImage: "http://www.ninkasibrewing.com/Family-Flagship-IPA-300x432.png"
+},
+{
+  beerName: 'Oakshire',
+  beerStyle: 'Espresso',
+  beerABV: '5%',
+  beerImage: "http://www.ninkasibrewing.com/Family-Flagship-IPA-300x432.png"
+},
+{
+  beerName: 'Ninkasi',
+  beerStyle: 'Slayer',
+  beerABV: '55%',
+  beerImage: "http://www.ninkasibrewing.com/Family-Flagship-IPA-300x432.png"
 }
 
   ];

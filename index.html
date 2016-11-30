@@ -3,6 +3,9 @@
   <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="style.css">
   <script src="node_modules/angular/angular.min.js"></script>
+  <script src="node_modules/jquery/dist/jquery.js"></script>
+  <link rel="stylesheet" type="text/css" href="node_modules/font-awesome/css/font-awesome.css">
+
 </head>
 
 <body ng-app="beerList" ng-controller="MainCtrl">
@@ -11,16 +14,23 @@
       <h1 class="text-center">Daves Ridiculously Amazing Beer List</h1>
       <div class="page-header">
       </div>
-
+<div class="mycontainer">
+<div class="myrow" >
       <!-- Render Beers Here -->
-      <div ng-repeat="beer in beersArray"> 
-      <h2>{{beer.beerName}}</h2> <ul>
-        <li>{{'Style: ' + beer.beerStyle}}</li>
-        <li>{{'ABV: ' + beer.beerABV}}</li>
-        <li>{{'Image: ' + beer.beerImage}}</li></ul>
+      <div class="beerPost" ng-repeat="beer in beersArray track by $index"> 
+<i ng-click="removeBeer($index)" class="fa fa-times fa-2x" aria-hidden="true"></i>
+<!-- Beer Image -->
+      <div class="imgWrap" ><img src={{beer.beerImage}} class="img-responsive"></div>
+
+        <h2 class="beerTitle" >{{beer.beerName}}</h2> 
+        <ul>
+          <li>{{'Style: ' + beer.beerStyle}}</li>
+          <li>{{'ABV: ' + beer.beerABV}}</li>
+        </ul>
         <hr>
       </div>
-
+      </div>
+</div>
       <form ng-submit="addBeer()">
         <h3>Add a new beer</h3>
 <!-- 

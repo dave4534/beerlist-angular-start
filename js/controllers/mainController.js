@@ -19,6 +19,10 @@ $scope.addToBeersArray = function(){
     $scope.image = '';
 };
 
+$scope.removeBeer = function(index){
+  $scope.beersArray.splice(index, 1);
+};
+
 
 });
 
